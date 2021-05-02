@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}   
+<header class="service-masthead">
+  <div class="container h-50 align-items-center justify-content-center">    
+      <h1 class="text-white font-weight-bold text-center">事業内容</h1>
+      <hr class="my-4" />
+  </div>
+</header>
+<div class="container-fuid">
+<div class="row my-5 mr-0 align-items-center justify-content-center">
+<div class="card col-10 col-md-5 m-2" style="width: 18rem;">
+  <img src="/static/img/service/chipper.jpg" class="card-img-top" alt="粉砕刃の画像">
+  <div class="card-body">
+    <h3 class="card-title">刃物の再研磨</h3>
+    <p class="card-text">工業刃物（粉砕刃）/ スリッター刃 / 裁断刃 / その他</p>
+    <a href="{% url 'kenma_app:saikenma' %}" class="btn btn-success">もっと見る</a>
+  </div>
+</div>
+<div class="card col-10 col-md-5 m-2" style="width: 18rem;">
+  <img src="/static/img/service/saidanki.png" class="card-img-top" alt="裁断機の画像">
+  <div class="card-body">
+    <h3 class="card-title">裁断機の販売</h3>
+    <p class="card-text">裁断機（新台、中古）/ 紙揃え / 帯かけ機 </p>
+    <a href="{% url 'kenma_app:saidanki' %}" class="btn btn-success">もっと見る</a>
+  </div>
+</div>
+<div class="card col-10 col-md-5 m-2" style="width: 18rem;">
+  <img src="/static/img/service/sizai.png" height="340" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">印刷資材の販売</h3>
+    <p class="card-text">針金 / シリコンスプレー / エアースプレー / ボンド（ホットメルト、トヨメルトなど）/ 定規（裁断機用）/ 各種オイル・グリス
+      etc...</p>
+    <a href="{% url 'kenma_app:sizai' %}" class="btn btn-success">もっと見る</a>
+  </div>
+</div>
+<div class="card col-10 col-md-5 m-2" style="width: 18rem;">
+  <img src="/static/img/naga_ken_logo.jpeg" height="365" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">その他</h3>
+    <p class="card-text">coming soon...</p>
+    <a href="#" class="btn btn-success">もっと見る</a>
+  </div>
+</div>
+
+</div>
+</div>
+{% endblock %}   

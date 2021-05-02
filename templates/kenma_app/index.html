@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block content %}   
+      <!-- Masthead-->
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="sns d-lg-none">
+                <a class="insta mr-3 p-2 rounded" href="https://www.instagram.com/nagamachi_kenma/" target="blank"><i class="fab fa-instagram fa-lg"></i> Instagram</a>
+                <a class="twitter p-2 rounded" href="https://twitter.com/VEijjttgIUUGH6k" target="blank"><i class="pa-2 fab fa-twitter fa-lg"></i> Twitter</a>
+            </div>
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold">研ぎ澄まされた高品質の刃物</h1>
+                <hr class="my-4" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5">60年以上の経験と創意工夫で21世紀の刃物業界に穴を開ける！</p>
+                <a class="btn-success text-decoration-none btn-xl" href="{% url 'kenma_app:saikenma' %}">再研磨価格表</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% comment %} 本社移転のお知らせ {% endcomment %}
+<section class="page-section border border-danger rounded container mt-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0 text-danger">本社移転のお知らせ！</h2>
+                        <hr class="my-4"/>
+                        <p class="mb-4 text-muted">2021年5月1日より、本社移転のため住所が変更します。<br>新しい住所　<span class="text-danger">岡山市南区新福1-8-4</span><br>尚、電話/FAX番号の変更はございません。<br>詳しくは<a class="text-danger" href="" class="text-decoration-none">⚠︎本社移転について⚠︎</a>をご覧ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About-->
+        <section class="page-section about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">長町研磨について</h2>
+                        <hr class="my-4"/>
+                        <p class="mb-4 text-muted">1960年に岡山県岡山市に創業しました。<br>以来、印刷関連の裁断刃と工業用刃物（粉砕刃）をメインに成長してきました。<br>その後、裁断機メーカーの<a href="http://www.katsuda-works.co.jp/" target="_blank" class="text-decoration-none">勝田製作所</a>の販売代理店として、主に岡山県内の裁断機の販売〜アフターケアを、お手伝いさせていただいております。<br>現在では、スリッター刃（丸刃）の再研磨も内製化に舵を切り現在に至ります。</p>
+                        <!-- <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services-->
+        <section class="page-section bg-light" id="services">
+            <div class="container">
+                <h2 class="text-center mt-0">事業内容</h2>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <a class="text-decoration-none" href="{% url 'kenma_app:saikenma' %}">
+                            <i class="fas fa-4x fa-gem mb-4"></i>
+                            <h3 class="mb-2 text-muted">工業用刃物研磨</h3>
+                            <p class="text-muted mb-0">粉砕刃〜スリッターまで、様々な形状、材質、サイズの再研磨を行います。</p>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <a class="text-decoration-none" href="{% url 'kenma_app:saidanki' %}">
+                            <i class="fas fa-4x fa-industry mb-4"></i>
+                            <h3 class="mb-2 text-muted">裁断機の販売</h3>
+                            <p class="text-muted mb-0">裁断機の新台〜中古、オーバーホール済みなどの販売をメインに、印刷関連の機械も販売しています。</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <a class="text-decoration-none" href="{% url 'kenma_app:sizai' %}">
+                            <i class="fas fa-4x fa-shopping-bag mb-4"></i>
+                            <h3 class="mb-2 text-muted">印刷関連の資材販売</h3>
+                            <p class="text-muted mb-0">印刷・製本機関連の、様々な資材の販売を行っています。</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <a class="text-decoration-none" href="#">
+                            <i class="fas fa-4x fa-question mb-4"></i>
+                            <h3 class="mb-2 text-muted">その他</h3>
+                            <p class="text-muted mb-0">coming soon...</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram -->
+        <h2 class="my-5 text-center insta">Instagram <i class="fab fa-instagram"></i></h2>
+        <div class="container text-center" id="insta">
+        </div>
+        <p class="text-center my-5">
+        <button type="button" class="insta btn"><a href="https://www.instagram.com/nagamachi_kenma/" target="blank" class="insta">もっと見る</a></button>
+    </p>
+        <!-- Call to action-->
+        <section class="page-section h-100 bg-dark text-white map">
+            <div class="container text-center">
+                <h2 class="my-5">アクセス</h2>
+                <hr class="text-white my-4">
+                <h3>
+                    〒700-0943<br>
+                岡山県岡山市南区新福1-14-4<br>
+                営業時間　8:15〜17:00<br>
+                定休日　土日 / 祝</h3>
+                <a href="{% url 'kenma_app:company' %}"><p class="btn btn-success btn-lg">詳細</p></a>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">お問い合わせ</h2>
+                        <hr class="my-4"/>
+                        <a href="{% url 'kenma_app:contact' %}"><i class="far fa-envelope fa-4x"></i></a>
+                        <p class="text-muted mt-5">新刃の作製から再研磨、裁断機の販売メンテナンスまで何でもお問い合わせください。</p>
+
+                    </div>
+                </div>    
+                </div>
+            </div>
+        </section>
+{% endblock %}   

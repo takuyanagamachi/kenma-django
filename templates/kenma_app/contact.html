@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}   
+
+<header class="contact-masthead">
+  <div class="container h-50 align-items-center justify-content-center">    
+      <h1 class="text-white font-weight-bold text-center">お問い合わせ</h1>
+      <hr class="my-4"/>
+  </div>
+</header>
+<div class="line text-center mt-3">
+  <h5>Lineからもお問い合わせ受け付けています。<i class="far fa-hand-point-down fa-lg"></i></h5>
+  <a href="https://lin.ee/UUFhZgk" target="_blank"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="50" border="0"></a>
+</div>
+<div class="container my-5">
+<form action="{% url 'kenma_app:contact' %}" method="POST">
+ {% csrf_token %}
+ <label for="id_name" class="sr-only">お名前</label>
+ <input class="form-control mb-3" name="name" maxlength="50" required="" id="id_name" type="text" placeholder="お名前">
+
+ <label for="id_email" class="sr-only">メールアドレス</label>
+ <input type="email" name="email" required="" id="id_email" placeholder="メールアドレス" class="form-control mb-3">
+
+ <label for="id_select" class="sr-only">タイトル:</label>
+ <select name="select" class="custom-select mb-3" id="id_select">
+  <option value="タイトルを選択してください">タイトルを選択してください</option>
+  <option value="粉砕刃">粉砕刃</option>
+  <option value="チッパーナイフ">チッパーナイフ</option>
+  <option value="スリッター">スリッター</option>
+  <option value="裁断刃">裁断刃</option>
+  <option value="製袋刃">製袋刃</option>
+  <option value="台切り">台切り</option>
+  <option value="その他">その他</option>
+</select>
+
+ <label for="id_message" class="sr-only">メッセージ:</label>
+ <textarea name="message" style="height: 300px;" cols="40" rows="10" required="" id="id_message" placeholder="メッセージ" class="form-control mb-3"></textarea>
+
+<button type="submit" class="btn btn-block btn-outline-success">送信する</button>
+</form>
+</div>
+{% endblock %}

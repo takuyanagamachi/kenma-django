@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% block content %}   
+<header class="service-masthead">
+  <div class="container h-50 align-items-center justify-content-center">    
+      <h1 class="text-white font-weight-bold text-center">刃物の再研磨</h1>
+      <hr class="my-4" />
+  </div>
+</header>
+<div class="alert alert-danger container mt-5">
+  <h4 class="mb-3 text-center">注意事項</h4>
+  <ul class="text-left">
+    <li>価格は、お客様からの持ち込み、または運送会社を利用して発送した場合の<span class="font-weight-bold">"WEB限定価格"</span>です。</li>
+    <li>入金確認後（研磨代）施工の工程に入ります。なお振込手数料と運送会社利用時の送料は、<span class="font-weight-bold">全額お客様負担になります。</span></li>
+    <li>納期につきましては、当社<span class="font-weight-bold">受け取り後3日以内</span>に施工して発送いたします。</li>
+    <li>刃物の欠けや研磨量につきましては、<a href="{% url 'kenma_app:contact' %}">お問い合わせページ</a>からご連絡ください。</li>
+  </ul>
+</div>
+<div class="bg-light mt-4">
+<h2 class="text-center p-5 text-secondary">ー発送〜納品までのながれー</h2>
+<div class="work-flow m-auto container row text-center">
+  <div class="col-sm-11 col-md-6 col-lg-3">
+    <p class="bg-success text-white">STEP 1</p>
+    <img class="card-img-top" src="/static/img/work-flow/f_f_business_45_s256_f_business_45_0nbg.jpg" alt="Card image cap">
+    <div class="card-body text-secondary">刃物の状態や詳細についてご連絡ください。</div>
+  </div>
+  <div class="col-sm-11 col-md-6 col-lg-3">
+    <p class="bg-success text-white">STEP 2</p>
+    <img class="card-img-top" src="/static/img/work-flow/f_f_object_31_s256_f_object_31_0nbg.jpg" alt="Card image cap">
+    <div class="card-body text-secondary">発送＆入金<br>（発送日に入金してもらうとで迅速に施工に入ることができます）</div>
+  </div>
+  <div class="col-sm-11 col-md-6 col-lg-3">
+    <p class="bg-success text-white">STEP 3</p>
+    <img class="card-img-top" height="63%" src="/static/img/work-flow/f_f_business_88_s256_f_business_88_1nbg.jpg" alt="Card image cap">
+    <div class="card-body text-secondary">受け取り後→刃物確認→施工開始</div>
+  </div>
+  <div class="col-sm-11 col-md-6 col-lg-3">
+    <p class="bg-success text-white">STEP 4</p>
+    <img class="card-img-top mb-5" src="/static/img/work-flow/f_f_traffic_16_s256_f_traffic_16_1nbg.jpg" alt="Card image cap">
+    <div class="card-body text-secondary">刃物発送→お客様受け取り</div>
+  </div>
+  </div>
+</div>
+<div class="my-5">
+<ul class="nav nav-tabs d-flex justify-content-around" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">粉砕刃</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">スリッター</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">裁断刃</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">その他</a>
+  </li>
+</ul>
+<div class="container tab-content" id="myTabContent">
+  <div class="tab-pane fade show active text-center m-1" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <h2 class="my-4">ー粉砕刃 価格表ー</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">サイズ</th>
+            <th scope="col">ハイス/1枚</th>
+            <th scope="col">超硬/1枚</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">~99m以下</th>
+            <td>¥600~</td>
+            <td>¥1,000~</td>
+          </tr>
+          <tr>
+            <th scope="row">100m~199m</th>
+            <td>¥950~</td>
+            <td>¥1,700~</td>
+          </tr>
+          <tr>
+            <th scope="row">200m~299m</th>
+            <td>¥2,000~</td>
+            <td>¥3,000~</td>
+          </tr>
+          <tr>
+            <th scope="row">300m~399m</th>
+            <td>¥3,000~</td>
+            <td>¥4,000~</td>
+          </tr>
+          <tr>
+            <th scope="row">400m~499m</th>
+            <td>¥4,000~</td>
+            <td>¥5,000~</td>
+          </tr>
+          <tr>
+            <th scope="row">500m~599m</th>
+            <td>¥5,000~</td>
+            <td>¥6,000~</td>
+          </tr>
+          <tr>
+            <th scope="row">600m~699m</th>
+            <td>¥6,000~</td>
+            <td>¥7,000~</td>
+          </tr>
+          <tr>
+            <th class="text-danger" scope="row">700m~</th>
+            <td class="text-danger">ご相談ください。</td>
+            <td class="text-danger">ご相談ください。</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="my-4">ー事例紹介ー</h2>
+      <div>
+      <img class="mb-3" src="/static/img/service/funsai/funsai1.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai2.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai3.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai4.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai5.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai6.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai7.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai8.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai9.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai10.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai11.jpg" width="320px" alt="粉砕刃">
+      <img class="mb-3" src="/static/img/service/funsai/funsai12.jpg" width="320px" alt="粉砕刃">
+    </div>
+    <p class="text-secondary">その他多数...</p>
+  </div>
+
+
+  <div class="tab-pane fade text-center m-1" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h2 class="my-4">ースリッター(丸刃) 価格表ー</h2>
+    <h2>ー事例紹介ー</h2>
+    <div class="row">
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter2.jpg" width="310px" alt="Card image cap">
+        <p>内径19φ/¥180~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter1.jpg" width="310px" alt="Card image cap">
+        <p>内径35φ/片刃¥280~/両刃¥310~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter3.jpg" width="310px" alt="Card image cap">
+        <p>内径38φ/¥250~</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter5.jpg" width="310px" alt="Card image cap">
+        <p>内径38φ/¥250~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter4.jpg" width="310px" alt="Card image cap">
+        <p>内径42φ/片刃¥300~/両刃¥330~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter8.jpg" width="310px" alt="Card image cap">
+        <p>内径70φ/¥500~</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter9.jpg" width="310px" alt="Card image cap">
+        <p>内径70φ/¥500~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter10.jpg" width="310px" alt="Card image cap">
+        <p>内径70φ/¥1,500~/超硬¥3,800~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter11.jpg" width="310px" alt="Card image cap">
+        <p>内径62φ/¥3,000~</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter6.jpg" width="310px" alt="Card image cap">
+        <p>内径80φ/¥500~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter7.jpg" width="310px" alt="Card image cap">
+        <p>内径115φ/¥500~</p>
+      </div>
+      <div class="p-1 col-sm-12 col-md-4 col-lg-4">
+        <img class="card-img-top" src="/static/img/service/slitter/slitter12.jpg" width="310px" alt="Card image cap">
+        <p>内径-φ(分割刃)/¥2,000~</p>
+      </div>
+    </div>
+    <p class="text-secondary">その他多数...</p>
+  </div>
+
+  <div class="tab-pane fade text-center m-1" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <h2 class="my-4">ー裁断刃 価格表ー</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">サイズ</th>
+          <th scope="col">ハイス/1枚</th>
+          <th scope="col">超硬/1枚</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">~499m</th>
+          <td>¥1,000~</td>
+          <td>¥2,000~</td>
+        </tr>
+        <tr>
+          <th scope="row">500m~999m</th>
+          <td>¥1,500~</td>
+          <td>¥3,000~</td>
+        </tr>
+        <tr>
+          <th scope="row">1000m~1499m</th>
+          <td>¥2,000~</td>
+          <td>¥4,000~</td>
+        </tr>
+        <tr>
+          <th scope="row">1500m~1999m</th>
+          <td>¥3,000~</td>
+          <td>¥7,500~</td>
+        </tr>
+        <tr>
+          <th scope="row">2000m~2499m</th>
+          <td>¥4,000~</td>
+          <td>¥9,500~</td>
+        </tr>
+        <tr>
+          <th class="text-danger" scope="row">2500m~</th>
+          <td class="text-danger">ご相談ください。</td>
+          <td class="text-danger">ご相談ください。</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>ー事例紹介ー</h2>
+<div>
+    <img class="mb-3" src="/static/img/service/dansai/dansai1.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai2.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai3.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai4.png" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai5.png" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai6.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai7.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai8.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai9.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai10.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai11.jpg" width="320px" alt="断裁刃">
+    <img class="mb-3" src="/static/img/service/dansai/dansai12.jpg" width="320px" alt="断裁刃">
+    <p class="text-secondary">その他多数...</p>
+</div>
+
+  </div>
+  <div class="tab-pane fade text-center m-1" id="other" role="tabpanel" aria-labelledby="other-tab">
+    <h2 class="my-4">ーその他 価格表ー</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">サイズ</th>
+          <th scope="col">ハイス/1枚</th>
+        　<th scope="col">備考</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">①ホットカッター（ぺテライザー）</th>
+          <td>¥450~</td>
+        </tr>
+        <tr>
+          <th scope="row">②木材カッター（スクエアー）</th>
+          <td>¥400~</td>
+          <td>４面研磨or2面研磨により価格変更あり</td>
+        </tr>
+        <tr>
+          <th scope="row">③台切り（押し切り）</th>
+          <td>¥1,500~</td>
+          <td>本体ごと搬入された場合は分解手数料として研磨+800円頂戴いたします</td>
+        </tr>
+        <tr>
+          <th scope="row">④農業器具刃物</th>
+          <td>¥2,700~</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">⑤ワイヤストリッパー刃</th>
+          <td>¥800~</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>ー事例紹介ー</h2>
+    <div>
+      <img class="mb-3" src="/static/img/service/other/other1.jpg" width="320px" alt="ホットカッター">
+      <img class="mb-3" src="/static/img/service/other/other2.jpg" width="320px" alt="木材カット">
+      <img class="mb-3" src="/static/img/service/other/other3.jpg" width="320px" alt="台切り 押し切り">
+      <img class="mb-3" src="/static/img/service/other/other4.jpg" width="320px" alt="農機具刃物">
+      <img class="mb-3" src="/static/img/service/other/other5.png" width="320px" height="180px" alt="配線刃物">
+      <p class="text-secondary">その他多数...</p>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}   

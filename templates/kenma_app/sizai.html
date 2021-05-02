@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}   
+<header class="sizai-masthead">
+  <div class="container h-50 align-items-center justify-content-center">    
+      <h1 class="text-white font-weight-bold text-center">資材</h1>
+      <hr class="my-4" />
+  </div>
+</header>
+
+<div class="container">
+  <div class="row my-5">
+    <div class="card my-2 col-md-4 col-9 mx-auto px-0">
+      <img src="/static/img/service/sizai/sizai1.png"  class="card-img-top h-80" alt="製本用針金">
+    </div>
+    <div class="card my-2 col-md-4 col-9 mx-auto px-0">
+      <img src="/static/img/service/sizai/sizai2.png" class="card-img-top" alt="パーツクリーナー">
+    </div>
+    <div class="card my-2 col-md-4 col-9 mx-auto px-0">
+      <img src="/static/img/service/sizai/sizai6.png" class="card-img-top" alt="シリコンエアゾール">
+    </div>
+    <div class="card my-2 col-md-4 col-9 mx-auto px-0">
+      <img src="/static/img/service/sizai/sizai4.png" class="card-img-top" alt="シリコンエアゾール">
+    </div>
+    <div class="card my-2 col-md-4 col-9 mx-auto px-0">
+      <img src="/static/img/service/sizai/sizai5.png" class="card-img-top" alt="ボンド">
+    </div>
+    <div class="card my-2 col-md-4 col-9 mx-auto px-0">
+      <img src="/static/img/service/sizai/sizai3.png" class="card-img-top" alt="ボンド">
+    </div>
+  </div>
+  <p class="text-center my-4 font-weight-bold">印刷、製本関連の資材は、上記以外にも多数取り扱っています。<a href="{% url 'kenma_app:contact' %}">お問い合わせください。</a></p>
+</div>   
+{% endblock %}   
